@@ -1,0 +1,4 @@
+race: race
+	gcc race.c -o race -lpthread
+
+
