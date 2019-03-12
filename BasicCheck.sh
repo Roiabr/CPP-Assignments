@@ -18,7 +18,7 @@ valgrind --leak-check=full --error-exitcode=1   ./"$executeble" shift 2 "$@" &> 
 fullmemoryout=$?
 if [[ $fullmemoryout -gt 0 ]];then
     OutputMemory="fail"
-    num=$(("$num"+2))
+    num=$(($num+2))
     else
     OutputMemory="pass"
 
@@ -27,7 +27,7 @@ valgrind --tool=helgrind  --error-exitcode=1   ./"$executeble" shift 2 "$@" &>/d
 sucssesthreadout=$?
 if [[ $sucssesthreadout -gt 0 ]];then
     OutPutThread="fail"
-    num=$(("$num"+1))
+    num=$(($num+1))
     else
       OutPutThread="pass"
 fi
