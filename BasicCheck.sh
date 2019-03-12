@@ -14,7 +14,7 @@ if [[ $sucssesmakeFile -gt 0 ]];then
 
 fi  
 
-valgrind --tool=memcheck --leak-check=full --error-exitcode=1   ./"$executeble" shift 2 "$@" &> /dev/null
+valgrind --leak-check=full --error-exitcode=1   ./"$executeble" shift 2 "$@" &> /dev/null
 fullmemoryout=$?
 if [[ $fullmemoryout -gt 0 ]];then
     OutputMemory="fail"
