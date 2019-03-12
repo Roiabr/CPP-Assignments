@@ -5,6 +5,6 @@ int main()
 {
     int *p = new int[5];
     cout << "hello,world";
-    delete[] p;
+    //delete[] p;
     return 0;
 }
